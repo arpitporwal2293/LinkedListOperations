@@ -12,6 +12,22 @@ public class Node {
 		System.out.println();
 	}
 	
+	public static Node addNode(Node node,int data){
+		Node newNode = new Node();
+		newNode.data = data;
+		newNode.next = null;
+		if(node!=null){
+			Node temp = node;
+			while(temp.next!=null){
+				temp = temp.next;
+			}
+			temp.next = newNode;
+		}else{
+			return newNode;
+		}
+		return node;
+	}
+	
 	public static Node addNode(int data){
 		Node newNode = new Node();
 		newNode.data = data;
