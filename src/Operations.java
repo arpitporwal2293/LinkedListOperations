@@ -70,8 +70,36 @@ public class Operations {
 		
 	}
 	
+	public static void removeDuplicateFromSorted(){
+		Node a = Node.addNode(null, 2);
+		a = Node.addNode(a, 2);
+		a = Node.addNode(a, 7);
+		a = Node.addNode(a, 8);
+		a = Node.addNode(a, 8);
+		a = Node.addNode(a, 9);
+		a = Node.addNode(a, 10);
+		a = Node.addNode(a, 10);
+		printLinkedList(a);
+		a = RemoveDuplicateElementsInSortedList.removeDuplicate(a);
+		printLinkedList(a);
+	}
+	
+	public static void mergeSort(){
+		Node a = Node.addNode(null, 4);
+		a = Node.addNode(a, 2);
+		a = Node.addNode(a, 8);
+		a = Node.addNode(a, 6);
+		a = Node.addNode(a, 5);
+		a = Node.addNode(a, 1);
+		a = Node.addNode(a, 7);
+		a = Node.addNode(a, 9);
+		printLinkedList(a);
+		a = MergeSortLinkedList.mergeSort(a);
+		printLinkedList(a);
+	}
+	
 	public static void main(String[] args) {
-		
+		mergeSort();
 	}
 	
 }
